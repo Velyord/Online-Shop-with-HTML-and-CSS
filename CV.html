@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>иКратко</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<meta name="author" content="Йоан Йорданов">
+
+<style>
+	td {
+		padding: 0px 5px;
+		text-align:right;
+	}
+		
+	b {
+		font-size:18px;
+	}
+			
+	i {
+		font-size:14px;
+	}
+	.zero {
+		font-size:16px;
+	}
+	.fontH {
+		font-size:18px;
+	}
+			
+	.vl {
+		border-right: 2px solid black;
+	}
+	
+	.leftTd {
+		text-align:left;
+		padding: 0px 10px;
+		border: 1px solid black;
+	}
+	
+	.rightTd {
+		text-align:right;
+		padding: 0px 10px;
+		border: 1px solid black;
+	}
+			
+	table {
+		border-collapse:collapse;
+	}
+	
+	#anime {
+	height:31px;
+	float:right;
+    animation: anime 4s 1;
+	}
+
+	@keyframes anime {
+		0% {
+			transform: rotate(0deg);
+		}
+		33% {
+			transform: rotate(-360deg);
+			
+		}
+		66% {
+			transform: rotate(-360deg);
+			
+		}
+		100% {
+			transform: rotate(0deg);
+			
+		}
+	}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+	<a href="index.html">
+		<svg>
+			<defs>
+				<linearGradient id="grad">
+					<stop offset="0%" style="stop-color:rgb(0,255,0);" />
+					<stop offset="100%"	style="stop-color:rgb(0,0,0);" />
+				</linearGradient>
+			</defs>
+			<ellipse cx="82" cy="102" rx="78" fill="url(#grad)" />
+			<image class="logo" x="20" y="-5" xlink:href="images/logo.png"/>
+		</svg>
+	</a>
+	<a href="index.html">
+		<h1>Магазин<br>иКратко</h1>
+	</a>
+</div>
+
+<label for="showMenu" class="showMenu pointer">Меню</label>
+<input type="checkbox" id="showMenu" role="button">
+<ul id="menu">
+	<li><a href="index.html">Продукти</a></li>
+	<li><a href="poruchki.html">Поръчки</a></li>
+	<li><a href="mneniq.html">Мнения</a></li>
+	<li class="floatRight">
+		<a class="active pointer">За собственика</a>
+		<ul class="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>  
+	<li class="floatRight"><a href="firma.html">За фирмата</a></li>		
+	<li>
+		<label for="showHidden" class="active showHidden pointer">За собственика</label>
+		<input type="checkbox" id="showHidden" role="button">
+		<ul id="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>        
+</ul>
+
+<div class="mainPanel">
+	<div class="leftContent">
+		<div class="podContent">
+			<table>
+				<tr>				
+					<td class="rightTd">
+						<h1>Европейски<br>
+							формат на<br>
+							Автобиография<br></h1>
+						<div id="anime">
+							<img src="images/euroFlag.png" alt="European flag" style="height:31px;">
+						</div>
+					</td>
+					<td class="vl"></td><td></td>
+					<td>
+						<a href="images/face.jpg">
+							<img id="face" src="images/face.jpg" style="height:180px">
+						</a>
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br><br></td></tr>
+				<tr>				
+					<td class="rightTd">
+						<b>Лична информация<b>
+					</td>
+					<td class="vl"></td><td></td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						Име
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						Йорданов Йоан Величков
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Адрес
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Телефон
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Факс
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						E-mail
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						Националност
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						Дата на раждане	
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<b>Трудов стаж</b>
+					</td>
+					<td class="vl"></td><td></td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						Дати (от-до)
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Име и адрес на<br>
+						работодателя
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+					</tr>
+				<tr>
+					<td class="rightTd">
+						Вид на дейността или<br>
+						сферата на работа
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Заемана длъжност
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Основни дейности и<br>
+						отговорности
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<b>Образование и<br>обучение</b>
+					</td>
+					<td class="vl"></td><td></td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						Дати (от-до)
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Име и вид на обучаващата<br>
+						или образователната<br>
+						организация
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Основни<br>
+						предмети/застъпени<br>
+						професионални умения
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Наименование на<br>
+						придобитата квалификация
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx	
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Ниво по националната<br>
+						класификация (ако е приложимо)
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						Дати (от-до)
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Име и вид на обучаващата<br>
+						или образователната<br>
+						организация
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Основни<br>
+						предмети/застъпени<br>
+						професионални умения
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Наименование на<br>
+						придобитата квалификация
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Ниво по националната<br>
+						класификация (ако е приложимо)
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<b>Лични умения и<br>
+						компетенции</b><br>
+						<i>Придобити в жизнения път<br>
+						или в професията, но не<br>
+						непременно удостоверени с <br>
+						официален документ или<br>
+						диплома.<i>
+					</td>
+					<td class="vl"></td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Майчин език</font>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						български
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Други езици</font>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						Английски
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="vl"></td><td></td>
+					<td class="vl"></td><td></td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Четене
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						отлично
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Писане
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						отлично
+					</td>
+				</tr>
+				<tr>
+					<td class="rightTd">
+						Разговор
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						отлично
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Социални умения и<br>
+						компетенции</br></font>
+						<i>Съвместно съжителство с<br>
+						други хора в интеркултурно<br>
+						обкръжение, в ситуации, в<br>
+						които комуникацията и<br>
+						екипната работа са от<br>
+						съществено значение<br>
+						(например в културата и<br>
+						спорта) и др.</i>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Организационни умения и<br>
+						компетенции<br></font>
+						<i>Координация,  управление и<br>
+						адмистрация на хора,<br>
+						проекти и бюджети в<br>
+						професионалната среда или<br>
+						на доброволни начала<br>
+						(например  в областта на<br>
+						културата и спорта) у дома и<br>
+						др.</i>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Технически умения и<br>
+						компетенции<br></font>
+						<i>Работа с компютри, със<br>
+						специфично оборудване,<br>
+						машини и др.</i>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx			
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Артистични умения и<br>
+						компетенции<br></font>
+						<i>Музикални, писмени,<br>
+						дизайнерски и др.</i>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Други умения и<br>
+						компетенции<br></font>
+						<i>Компетенции, които не са<br>
+						споменати по-горе.</i>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<font class="fontH">Свидетелство за<br>
+						управление на МПС<br></font>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<b>Допълнителна<br>
+						информация</b>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+				<tr><td><td class="vl"><br></td></tr>
+				<tr>
+					<td class="rightTd">
+						<b>Приложения</b>
+					</td>
+					<td class="vl"></td><td></td>
+					<td class="leftTd">
+						xxx
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="rightContent">
+		<div class="podContent">
+			<h2>Новини</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се случи<br><br><br><br><br><br></p>
+		</div>
+	</div>
+	<div class="rightContent sticky">
+		<div class="podContent">
+			<h2>Реклама</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се продава<br><br><br><br><br><br></p>
+		</div>
+		<div class="rightMenu">
+			<label for="showSideMenu" class="showSideMenu pointer">Меню</label>
+			<input type="checkbox" id="showSideMenu" role="button">
+			<ul id="sideMenu">
+				<li><a href="index.html">Продукти</a></li>
+				<li><a href="poruchki.html">Поръчки</a></li>
+				<li><a href="mneniq.html">Мнения</a></li>
+				<li><a href="firma.html">За фирмата</a></li>	
+				<li>
+					<a class="active pointer">За собственика</a>
+					<ul class="hidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>  	
+				<li>
+					<label for="showSideHidden" class="active showSideHidden pointer">За собственика</label>
+					<input type="checkbox" id="showSideHidden" role="button">
+					<ul id="sideHidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<h3>Copyright © 2019 iKratko. All rights reserved.</h3>
+</div>
+
+</body>
+</html>		

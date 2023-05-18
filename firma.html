@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>иКратко</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<meta name="author" content="Йоан Йорданов">
+
+</head>
+<body>
+
+<div class="header">
+	<a href="index.html">
+		<svg>
+			<defs>
+				<linearGradient id="grad">
+					<stop offset="0%" style="stop-color:rgb(0,255,0);" />
+					<stop offset="100%"	style="stop-color:rgb(0,0,0);" />
+				</linearGradient>
+			</defs>
+			<ellipse cx="82" cy="102" rx="78" fill="url(#grad)" />
+			<image class="logo" x="20" y="-5" xlink:href="images/logo.png"/>
+		</svg>
+	</a>
+	<a href="index.html">
+		<h1>Магазин<br>иКратко</h1>
+	</a>
+</div>
+
+<label for="showMenu" class="showMenu pointer">Меню</label>
+<input type="checkbox" id="showMenu" role="button">
+<ul id="menu">
+	<li><a href="index.html">Продукти</a></li>
+	<li><a href="poruchki.html">Поръчки</a></li>
+	<li><a href="mneniq.html">Мнения</a></li>
+	<li class="floatRight">
+		<a class="pointer">За собственика</a>
+		<ul class="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>  
+	<li class="floatRight"><a class="active" href="firma.html">За фирмата</a></li>		
+	<li>
+		<label for="showHidden" class="showHidden pointer">За собственика</label>
+		<input type="checkbox" id="showHidden" role="button">
+		<ul id="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>        
+</ul>
+
+<div class="mainPanel">
+	<div class="leftContent">
+		<div class="podContent">
+			<embed height="500px" width="100%" src="https://www.wikipedia.org/">
+		</div>
+		<div class="podContent">
+			<p>Графика на приходите на фирмата през последната година:</p>
+			<canvas id="myCanvas" width="500" height="350"></canvas>
+			<script>
+				var canvas = document.getElementById("myCanvas");
+				var c = canvas.getContext("2d");
+				c.beginPath();
+				c.moveTo(11,10);
+				c.lineTo(10,310);
+				c.lineTo(410,310);
+				c.stroke();
+				
+				c.beginPath();
+				c.moveTo(12,250);
+				c.lineTo(60,210);
+				c.strokeStyle="red";
+				c.lineWidth = 5;
+				c.stroke();
+				
+				c.beginPath();
+				c.arc(67, 203, 5, 0, Math.PI * 2);
+				c.stroke();
+				
+				c.beginPath();
+				c.moveTo(74,210);
+				c.lineTo(110,275);
+				c.strokeStyle="red";
+				c.lineWidth = 5;
+				c.stroke();
+				
+				c.beginPath();
+				c.arc(114, 284, 5, 0, Math.PI * 2);
+				c.stroke();
+				
+				c.beginPath();
+				c.moveTo(118,274);
+				c.lineTo(175,110);
+				c.strokeStyle="red";
+				c.lineWidth = 5;
+				c.stroke();
+				
+				c.beginPath();
+				c.arc(179, 100, 5, 0, Math.PI * 2);
+				c.stroke();
+				
+				c.beginPath();
+				c.moveTo(189,100);
+				c.lineTo(260,100);
+				c.strokeStyle="red";
+				c.lineWidth = 5;
+				c.stroke();
+				
+				c.beginPath();
+				c.arc(270, 100, 5, 0, Math.PI * 2);
+				c.stroke();
+				
+				c.beginPath();
+				c.moveTo(278,105);
+				c.lineTo(340,160);
+				c.strokeStyle="red";
+				c.lineWidth = 5;
+				c.stroke();
+				
+				c.beginPath();
+				c.arc(347, 167, 5, 0, Math.PI * 2);
+				c.stroke();
+				
+				c.beginPath();
+				c.moveTo(355,159);
+				c.lineTo(405,50);
+				c.strokeStyle="red";
+				c.lineWidth = 5;
+				c.stroke();
+				
+				c.beginPath();
+				c.arc(408, 41, 5, 0, Math.PI * 2);
+				c.stroke();
+				
+				c.font = "10px";
+				c.fillText("250", 50, 325);
+				
+				c.font = "10px";
+				c.fillText("500", 150, 325);
+				
+				c.font = "10px";
+				c.fillText("750", 250, 325);
+				
+				c.font = "10px";
+				c.fillText("1000", 350, 325);
+				
+				c.font = "10px";
+				c.fillText("0", 0, 300);
+				
+				c.font = "10px";
+				c.fillText("2", 0, 230);
+				
+				c.font = "10px";
+				c.fillText("4", 0, 160);
+				
+				c.font = "10px";
+				c.fillText("6", 0, 90);
+				
+				c.font = "10px";
+				c.fillText("8", 0, 20);
+			</script>
+		</div>
+	</div>
+	<div class="rightContent">
+		<div class="podContent">
+			<h2>Новини</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се случи<br><br><br><br></p>
+		</div>
+	</div>
+	<div class="rightContent sticky">
+		<div class="podContent">
+			<h2>Реклама</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се продава<br><br><br><br></p>
+		</div>
+		<div class="rightMenu">
+			<label for="showSideMenu" class="showSideMenu pointer">Меню</label>
+			<input type="checkbox" id="showSideMenu" role="button">
+			<ul id="sideMenu">
+				<li><a href="index.html">Продукти</a></li>
+				<li><a href="poruchki.html">Поръчки</a></li>
+				<li><a href="mneniq.html">Мнения</a></li>
+				<li><a class="active" href="firma.html">За фирмата</a></li>	
+				<li>
+					<a class="pointer">За собственика</a>
+					<ul class="hidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>  	
+				<li>
+					<label for="showSideHidden" class="showSideHidden pointer">За собственика</label>
+					<input type="checkbox" id="showSideHidden" role="button">
+					<ul id="sideHidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<h3>Copyright © 2019 iKratko. All rights reserved.</h3>
+</div>
+
+</body>
+</html>
+				

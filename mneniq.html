@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>иКратко</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<meta name="author" content="Йоан Йорданов">
+
+</head>
+<body>
+
+<div class="header">
+	<a href="index.html">
+		<svg>
+			<defs>
+				<linearGradient id="grad">
+					<stop offset="0%" style="stop-color:rgb(0,255,0);" />
+					<stop offset="100%"	style="stop-color:rgb(0,0,0);" />
+				</linearGradient>
+			</defs>
+			<ellipse cx="82" cy="102" rx="78" fill="url(#grad)" />
+			<image class="logo" x="20" y="-5" xlink:href="images/logo.png"/>
+		</svg>
+	</a>
+	<a href="index.html">
+		<h1>Магазин<br>иКратко</h1>
+	</a>
+</div>
+
+<label for="showMenu" class="showMenu pointer">Меню</label>
+<input type="checkbox" id="showMenu" role="button">
+<ul id="menu">
+	<li><a href="index.html">Продукти</a></li>
+	<li><a href="poruchki.html">Поръчки</a></li>
+	<li><a class="active" href="mneniq.html">Мнения</a></li>
+	<li class="floatRight">
+		<a class="pointer">За собственика</a>
+		<ul class="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>  
+	<li class="floatRight"><a href="firma.html">За фирмата</a></li>		
+	<li>
+		<label for="showHidden" class="showHidden pointer">За собственика</label>
+		<input type="checkbox" id="showHidden" role="button">
+		<ul id="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>        
+</ul>
+
+<div class="mainPanel">
+	<div class="leftContent">
+		<div class="podContent">
+			<form name="mnenie">
+				<fieldset>
+					<legend>Продукт, за който искате да изкажете мнение:</legend>
+					<select>
+						<optgroup label="За мъже">
+							<option value="Item1">Мъжка хигиенна превръзка</option>
+							<option value="Item4">Душ-гел за мъже със сребро</option>
+						</optgroup>
+						<optgroup label="За жени">
+						<option value="Item3">Златна маска за лице</option>
+						</optgroup>
+						<optgroup label="За дома">
+							<option value="Item2">Подправки "Красота и младост"</option>
+							<option value="Item5">Лавандулово мече</option>
+						</optgroup>
+					</select><br>
+				</fieldset><br>
+				<fieldset>
+					<legend>Вашето мнение:</legend>
+					<textarea rows="10" cols="50" required
+					oninvalid="this.setCustomValidity('Въведете вашия адрес тук')" 
+					oninput="this.setCustomValidity('')"></textarea><br>
+				</fieldset><br>
+				<input type="submit" value="Изпрати"><br>
+			</form>
+		</div>
+	</div>
+	<div class="rightContent">
+		<div class="podContent">
+			<h2>Новини</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се случи<br><br><br><br></p>
+		</div>
+	</div>
+	<div class="rightContent sticky">
+		<div class="podContent">
+			<h2>Реклама</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се продава<br><br><br><br></p>
+		</div>
+		<div class="rightMenu">
+			<label for="showSideMenu" class="showSideMenu pointer">Меню</label>
+			<input type="checkbox" id="showSideMenu" role="button">
+			<ul id="sideMenu">
+				<li><a href="index.html">Продукти</a></li>
+				<li><a href="poruchki.html">Поръчки</a></li>
+				<li><a class="active" href="mneniq.html">Мнения</a></li>
+				<li><a href="firma.html">За фирмата</a></li>	
+				<li>
+					<a class="pointer">За собственика</a>
+					<ul class="hidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>  	
+				<li>
+					<label for="showSideHidden" class="showSideHidden pointer">За собственика</label>
+					<input type="checkbox" id="showSideHidden" role="button">
+					<ul id="sideHidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<h3>Copyright © 2019 iKratko. All rights reserved.</h3>
+</div>
+
+</body>
+</html>

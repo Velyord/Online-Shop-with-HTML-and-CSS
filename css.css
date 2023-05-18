@@ -1,0 +1,273 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration:none;
+	color:black;
+}
+
+body {
+	padding: 10px 10px 0 10px;
+	margin-bottom:0;
+	background: url('images/bg.jpg') no-repeat fixed 100%;
+}
+
+.header {
+	padding: 30px;
+	text-align: center;
+	background: url('images/header.jpg') no-repeat;
+	background-size: 100% 100%; 
+}
+
+.logo {
+	width:118px;
+	height:auto;
+}
+
+svg {
+	float:right;
+	width:200px;
+	height:200px;
+}
+
+.header h1 {
+	font-size: 60px;
+	color:white;
+	-webkit-text-stroke: 2px #333;
+	text-shadow:
+		3px 3px 0 #333,
+		-1px -1px 0 #333,  
+		1px -1px 0 #333,
+		-1px 1px 0 #333,
+		1px 1px 0 #333;
+}
+
+/* Две колони */
+/* Главна колона */
+.leftContent {   
+	float: left;
+	width: 75%;
+}
+
+/* Дясна колона */
+.rightContent {
+	float: left;
+	width: 25%;
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
+}
+
+/* снимки в дясната колона */
+.placeHolder {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+	text-align:center;
+}
+
+/* Стил на разделите на главната колона */
+.leftContent .podContent {
+	margin-top: 20px;
+	padding:0 20px;
+}
+
+/* Стил на разделите на дясната колона */
+.rightContent .podContent {
+	margin-top: 20px;
+	padding:0 20px;
+	border:1px solid #333;
+	background: url('images/header.jpg') no-repeat;
+	background-size: 100% 100%; 
+}
+
+/* Странично меню */
+.rightMenu {
+	margin: 20px 0;
+}
+
+.mainPanel:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.footer {
+	padding: 10px;
+	text-align: center;
+	background: #333;
+	margin:45px 0 10px 0;
+	color:white;
+}
+
+/* Меню */
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background:#333;
+	border:1px solid #333;
+}
+
+/* Падащото меню */
+ul .hidden {
+	position:absolute;
+}
+
+/* Линковете на главното меню да са подредени един до друг */
+li {
+	display:inline-block;
+	float: left;
+}
+
+/* Линковете на страничното меню да са един под друг */
+#sideMenu li {
+	display:block; 
+	float:none; 
+	width:100%;
+}
+
+/* Линковете в падащото меню в страничното меню */
+#sideMenu li ul li{
+	display:inline-block;
+}
+
+/* Фирмата и За собственика */
+.floatRight {
+	float:right;
+}
+
+/*Стил на линковете в менюто*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	background: #333;
+	text-decoration: none;
+}
+
+/* Цвета на елементите от менюто, когато мишката е върху един от тях, с изключение на елементите, които са с class active */
+li:hover a, .showMenu:hover, .showHidden:hover:not(.active), .showSideMenu:hover, .showSideHidden:hover:not(.active) {
+	background: #111;
+	transition: 0.3s;
+}
+
+/* Когато мишката е върху 'За собственика', цветът на елементите под него да е #333 */
+li:hover #hidden a, li:hover #sideHidden a{
+	background:#333;
+}
+
+/* Когато мишката е върху един от елементите в отварящия бутон 'За собственика' при свит екран */
+li:hover #hidden a:hover, li:hover #sideHidden a:hover {
+	background: #111;
+}
+
+/* Падащо меню */
+li:hover .hidden a {
+	background: #f9f9f9;
+	color: black;
+	height: 50px;
+	line-height: 50px;
+	min-width:140px;
+}
+
+/* Когато мишката е върху падащото меню */
+li:hover .hidden a:hover {
+	background: #ddd;
+}
+
+/* Скриване на падащото меню */
+li ul {
+	display: none;
+}
+
+/* Линковете в падащото меню да са вертикално подредени */
+li ul li {
+	display: block;
+	float: none;
+}
+
+/* Показване на падащото меню, когато мишката е върху него */
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+	z-index:1;
+}
+
+/* Когато мишката е върху елемент на меню, но не е линк */
+.pointer {
+	cursor: pointer;
+}
+
+/* Промяна на цвета на бутона, в зависимост, в коя страница се намираме */
+li a.active, label.active {
+	background-color:rgb(0,155,0);
+	font-weight:bold;
+}
+
+/*Стил на 'меню' при свит екран*/
+.showMenu, .showHidden, .showSideMenu, .showSideHidden {
+	text-decoration: none;
+	color: white;
+	background: #333;
+	text-align: center;
+	display: none;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+
+/* Скриване на кутииката */
+input[type=checkbox]{
+    display: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width : 768px){
+	
+	/* Покажи менюто, когато "кутииката" е маркирана */
+	input[type=checkbox]:checked ~ #menu {
+		display: block;
+	}
+
+	input[type=checkbox]:checked ~ #sideMenu {
+		display: block;
+	}
+
+	input[type=checkbox]:checked ~ #hidden {
+		display: block;
+	}
+
+	input[type=checkbox]:checked ~ #sideHidden {
+		display: block;
+	}
+
+	/* Скриване на излишните елементи */
+	.pointer, svg {
+		display:none;
+	}
+	
+	/* Скриване на менюто в "кутиика" */
+	ul {
+		position: static;
+		display: none;
+	}
+	
+	/* Елементите заемат цялото пространство на страницата */
+	.leftContent, .rightContent, ul li, li a {
+		width: 100%;
+	}
+	
+	/* Показване на 'меню' при свит екран */
+	.showMenu, .showHidden, .showSideMenu, .showSideHidden {
+		display:block;
+	}
+}

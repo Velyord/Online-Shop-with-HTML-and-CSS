@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>иКратко</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<meta name="author" content="Йоан Йорданов">
+
+<style>	
+	div.gallery {
+		margin: 0 5px 20px 5px;
+		float: left;
+		width: 280px;
+		background: url('images/header.jpg') no-repeat;
+		background-size: 100% 100%;
+		border:1px solid #333;
+	}
+
+	div.gallery img:hover {
+		opacity:0.7;
+	}
+
+	div.gallery img {
+		width: 100%;
+		height: auto;
+		transition: 0.5s;
+	}
+
+	div.desc {
+		padding: 15px;
+		text-align: center;
+		font-weight:bold;
+		background-color:rgb(0,155,0);
+		color:white;
+		border-top:1px solid #333;
+	}
+	
+	.lenta {
+		border-bottom: 50px solid rgba(0,155,0, 0.7);
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		height: 0;
+		width: 250px;
+		transform:rotate(-45deg);
+		margin-left:-55px;
+		margin-top:45px;
+		position:absolute;
+		z-index:1;
+	}
+	
+	.promo {
+		font-weight:bold;
+		color:white;
+		text-align:center;
+		font-size:20px;
+		line-height:15px;
+	}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+	<a href="index.html">
+		<svg>
+			<defs>
+				<linearGradient id="grad">
+					<stop offset="0%" style="stop-color:rgb(0,255,0);" />
+					<stop offset="100%"	style="stop-color:rgb(0,0,0);" />
+				</linearGradient>
+			</defs>
+			<ellipse cx="82" cy="102" rx="78" fill="url(#grad)" />
+			<image class="logo" x="20" y="-5" xlink:href="images/logo.png"/>
+		</svg>
+	</a>
+	<a href="index.html">
+		<h1>Магазин<br>иКратко</h1>
+	</a>
+</div>
+
+<label for="showMenu" class="showMenu pointer">Меню</label>
+<input type="checkbox" id="showMenu" role="button">
+<ul id="menu">
+	<li><a class="active" href="index.html">Продукти</a></li>
+	<li><a href="poruchki.html">Поръчки</a></li>
+	<li><a href="mneniq.html">Мнения</a></li>
+	<li class="floatRight">
+		<a class="pointer">За собственика</a>
+		<ul class="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>  
+	<li class="floatRight"><a href="firma.html">За фирмата</a></li>		
+	<li>
+		<label for="showHidden" class="showHidden pointer">За собственика</label>
+		<input type="checkbox" id="showHidden" role="button">
+		<ul id="hidden">
+			<li><a href="CV.html">CV</a></li>
+			<li><a href="film.html">Филм</a></li>
+			<li><a href="muzika.html">Музика</a></li>
+		</ul>
+	</li>
+</ul>
+
+<div class="mainPanel">
+	<div class="leftContent">
+		<div class="podContent">
+			<div class="gallery">
+				<a href="images/item1.jpg">
+					<img src="images/item1.png" alt="item 1" width="600" height="400">
+					<div class="desc">Мъжка хигиенна превръзка,<br>1 бр<br><br>6.20 лв.</div>
+				</a>
+			</div>
+			<div class="gallery">
+				<a href="images/item2.jpg">
+					<div class="lenta"><p class="promo">ПРОМОЦИЯ</p></div>
+					<img src="images/item2.png" alt="item 2" width="600" height="400">
+					<div class="desc">Подправки "Красота и младост", 30г<br><br><s>61.60 лв.</s> 15.40 лв.</div>
+				</a>
+			</div>
+			<div class="gallery">
+				<a href="images/item3.jpg">
+					<div class="lenta"><p class="promo">ПРОМОЦИЯ</p></div>
+					<img src="images/item3.png" alt="item 3" width="600" height="400">
+					<div class="desc">Златна маска за лице,<br>130г<br><br><s>48.80 лв.</s> 12.20 лв.</div>
+				</a>
+			</div>
+			<div class="gallery">
+				<a href="images/item4.jpg">
+					<div class="lenta"><p class="promo">ПРОМОЦИЯ</p></div>
+					<img src="images/item4.png" alt="item 4" width="600" height="400">
+					<div class="desc">Душ-гел за мъже със сребро, 250мл<br><br><s>76.40 лв.</s> 19.10 лв.</div>
+				</a>
+			</div>
+			<div class="gallery">
+				<a href="images/item5.jpg">
+					<img src="images/item5.png" alt="item 5" width="600" height="400">
+					<div class="desc">Лавандулово мече,<br>30см<br><br>99.00 лв.</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="rightContent">
+		<div class="podContent">
+			<h2>Новини</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се случи<br><br><br><br></p>
+		</div>
+	</div>
+	<div class="rightContent sticky">
+		<div class="podContent">
+			<h2>Реклама</h2>
+			<div class="placeHolder"><p>Image</p></div>
+			<p>Това се продава<br><br><br><br></p>
+		</div>
+		<div class="rightMenu">
+			<label for="showSideMenu" class="showSideMenu pointer">Меню</label>
+			<input type="checkbox" id="showSideMenu" role="button">
+			<ul id="sideMenu">
+				<li><a class="active" href="index.html">Продукти</a></li>
+				<li><a href="poruchki.html">Поръчки</a></li>
+				<li><a href="mneniq.html">Мнения</a></li>
+				<li><a href="firma.html">За фирмата</a></li>	
+				<li>
+					<a class="pointer">За собственика</a>
+					<ul class="hidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>  	
+				<li>
+					<label for="showSideHidden" class="showSideHidden pointer">За собственика</label>
+					<input type="checkbox" id="showSideHidden" role="button">
+					<ul id="sideHidden">
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="film.html">Филм</a></li>
+						<li><a href="muzika.html">Музика</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<h3>Copyright © 2019 iKratko. All rights reserved.</h3>
+</div>
+
+</body>
+</html>
